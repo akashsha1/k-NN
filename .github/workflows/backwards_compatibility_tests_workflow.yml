@@ -106,7 +106,6 @@ jobs:
         name: Run k-NN Restart-Upgrade BWC Tests from BWCVersion-${{ matrix.bwc_version }} to OpenSearch Version-${{ matrix.opensearch_version }} on Ubuntu
         run: |
           echo "Running restart-upgrade backwards compatibility tests ..."          
-          chown -R 1000:1000 `pwd`
           if lscpu  | grep -i avx512f | grep -i avx512cd | grep -i avx512vl | grep -i avx512dq | grep -i avx512bw          
           then
             echo "avx512 available on system"
@@ -187,7 +186,6 @@ jobs:
         name: Run k-NN Rolling-Upgrade BWC Tests from BWCVersion-${{ matrix.bwc_version }} to OpenSearch Version-${{ matrix.opensearch_version }} on Ubuntu
         run: |
           echo "Running rolling-upgrade backwards compatibility tests ..."
-          chown -R 1000:1000 `pwd`
           if lscpu  | grep -i avx512f | grep -i avx512cd | grep -i avx512vl | grep -i avx512dq | grep -i avx512bw          
           then
             echo "avx512 available on system"
