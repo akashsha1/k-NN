@@ -134,6 +134,14 @@ public class KNNConstants {
     public static final String FAISS_SIGNED_BYTE_SQ = "SQ8_direct_signed";
     public static final String FAISS_SQ_CLIP = "clip";
 
+    // Faiss SVS (Intel) specific constants
+    public static final String FAISS_SVS_DESCRIPTION = "SVS";
+    public static final String FAISS_SVS_ENCODER_LVQ = "lvq";
+    public static final String FAISS_SVS_ENCODER_LEANVEC = "leanvec";
+    public static final String FAISS_SVS_ENCODER_STATIC_FLAT = "static_flat";
+    public static final String FAISS_SVS_ENCODER_DYNAMIC_VAMANA = "dynamic_vamana";
+    public static final List<String> FAISS_SVS_ENCODER_TYPES = List.of(FAISS_SVS_ENCODER_LVQ, FAISS_SVS_ENCODER_LEANVEC, FAISS_SVS_ENCODER_STATIC_FLAT, FAISS_SVS_ENCODER_DYNAMIC_VAMANA);
+
     // Parameter defaults/limits
     public static final Integer ENCODER_PARAMETER_PQ_CODE_COUNT_DEFAULT = 1;
     public static final Integer ENCODER_PARAMETER_PQ_CODE_COUNT_LIMIT = 1024;

@@ -42,6 +42,12 @@ public class IndexTypeToFaissIndexMapping {
         mapping.put(FaissBinaryHnswIndex.IBHF, (indexType) -> new FaissBinaryHnswIndex());
         mapping.put(FaissIdMapIndex.IBMP, FaissIdMapIndex::new);
 
+        // SVS index
+        mapping.put(FaissSVSIndex.ISVF, (indexType) -> new FaissSVSIndex());
+        mapping.put(FaissSVSIndex.ISVL, (indexType) -> new FaissSVSIndex());
+        mapping.put(FaissSVSIndex.ISVD, (indexType) -> new FaissSVSIndex());
+        mapping.put(FaissSVSIndex.ILVQ, (indexType) -> new FaissSVSIndex());  
+
         INDEX_TYPE_TO_FAISS_INDEX = Collections.unmodifiableMap(mapping);
     }
 
